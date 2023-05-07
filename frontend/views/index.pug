@@ -1,0 +1,28 @@
+doctype html
+
+html(lang='de')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='css/base.css')
+        link(rel='stylesheet', href='css/index.css')
+        title= title
+    body
+        div(id='content')
+            div(id='search')
+                h1 Was suchst du?
+                form(action='/search', method='post', enctype='multipart/form-data')
+                    div
+                        input(type='text', name='query')
+                        button(type="submit") Suchen
+                p= message
+
+            div(id='footer')
+                a(href="")
+                    h2 HerrKallupke
+
+                a(href="")
+                    h2 Impressum 
+
+        script(src='js/index.js')

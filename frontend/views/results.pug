@@ -1,0 +1,56 @@
+doctype html
+
+html(lang='de')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='css/base.css')
+        link(rel='stylesheet', href='css/results.css')
+        title= title
+    body
+        div(id='content')
+            div(id='results')
+                h1 Ergebnisse:
+
+                ul
+                    if data[0] != null
+                        a(href=data[0][0])
+                            li
+                                img(src= data[0][1][0], alt="Product Image")
+                                div
+                                    h2= data[0][1][1]
+                                    p= data[0][1][2]
+
+                    if data[1] != null
+                        a(href=data[1][0])
+                            li
+                                img(src= data[1][1][0], alt="Product Image")
+                                div
+                                    h2= data[1][1][1]
+                                    p= data[1][1][2]
+
+                    if data[2] != null
+                        a(href=data[2][0])
+                            li
+                                img(src= data[2][1][0], alt="Product Image")
+                                div
+                                    h2= data[2][1][1]
+                                    p= data[2][1][2]
+
+                    if data[3] != null
+                        a(href=data[3][0])
+                            li
+                                img(src= data[3][1][0], alt="Product Image")
+                                div
+                                    h2= data[3][1][1]
+                                    p= data[3][1][2]
+
+            div(id='footer')
+                a(href="")
+                    h2 HerrKallupke
+
+                a(href="")
+                    h2 Impressum 
+
+        script(src='js/index.js')

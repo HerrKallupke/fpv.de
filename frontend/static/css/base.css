@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+:root {
+    --background-color: #092327;
+    --accent-color: #90c2e7;
+    --error-color: #d62246;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Basic', sans-serif;
+    color: var(--accent-color);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 1.3vw;
+}
+
+p {
+    font-size: 1vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+#content {
+    margin: 0 5vw;
+
+    height: 100vh;
+}
+
+#footer {
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer a {
+    padding: 0.5vw 1vw;
+
+    border: 5px solid transparent;
+    border-radius: 20px;
+}
+
+#footer a:hover {
+    border-color: var(--accent-color);
+}
