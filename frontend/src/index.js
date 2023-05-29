@@ -1,8 +1,10 @@
 const express = require('express');
 const multer = require('multer');
 const axios = require('axios');
+const https = require('https');
+const fs = require('fs');
 
-const { PORT, API_PORT } = require('../config.json');
+const { PORT, API_PORT, CERTIFICATE, PRIVATE_KEY } = require('../config.json');
 
 const upload = multer();
 const app = express();
@@ -26,6 +28,7 @@ app.post('/search', upload.none(), (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Website running on http://127.0.0.1:${PORT}.`);
-});
+const certificate = fs.readFileSync(CERTIFICATE);
+const privateKey = fs.readFileSync(PRIVATE_KEY);
+
+https.createServer({ cert: certificate, key: privateKey }, app).listen(PORT);
