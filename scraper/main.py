@@ -1,4 +1,5 @@
 import flyingfolk
+import amax
 
 
-flyingfolk.scrape()
+amax.scrape()
