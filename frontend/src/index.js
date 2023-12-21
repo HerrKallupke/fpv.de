@@ -28,9 +28,4 @@ app.post('/search', upload.none(), (req, res) => {
     }
 });
 
-const certificate = fs.readFileSync(CERTIFICATE);
-const privateKey = fs.readFileSync(PRIVATE_KEY);
-
-https.createServer({ cert: certificate, key: privateKey }, app).listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT)

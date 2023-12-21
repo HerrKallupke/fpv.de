@@ -1,5 +1,5 @@
 {
-    "PORT": 443,
+    "PORT": 8000,
     "API_PORT": 8080,
     "CERTIFICATE": "/etc/letsencrypt/live/searchfpv.de/fullchain.pem",
     "PRIVATE_KEY": "/etc/letsencrypt/live/searchfpv.de/privkey.pem"
